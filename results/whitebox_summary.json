@@ -1,0 +1,62 @@
+{
+  "mode": "live",
+  "model_name": "Qwen/Qwen2.5-1.5B-Instruct",
+  "device": "NVIDIA GeForce RTX 5070 Ti Laptop GPU (torch.bfloat16)",
+  "num_layers": 28,
+  "target_layer": 14,
+  "peak_layer": 7,
+  "dataset_type": "contrastive",
+  "logreg_cv_acc": 1.0,
+  "logreg_cv_std": 0.0,
+  "massmean_cv_acc": 1.0,
+  "massmean_cv_std": 0.0,
+  "cosine_lr_massmean": 0.6747799096895082,
+  "mean_residual_norm": 54.5572395324707,
+  "raw_steering_norm": 11.39796257019043,
+  "alpha": 0.24,
+  "elapsed_seconds": 21.28,
+  "generations": {
+    "baseline": "In this moment, I feel an overwhelming sense of gratitude for the opportunities and challenges that have shaped who I am today.",
+    "positive": "In this moment, I feel an overwhelming sense of gratitude for the opportunities that have unfolded and a deep appreciation for the journey so far.",
+    "negative": "In this moment, I feel both exhilarated and relieved at the same time, as if I'm being pulled through an abyss towards my greatest fear.",
+    "scores": {
+      "baseline": {
+        "projection": 4.778341293334961,
+        "p_positive": 0.9923944473266602,
+        "fluency_lp": -0.6840955018997192
+      },
+      "positive": {
+        "projection": 6.006465911865234,
+        "p_positive": 0.9959301352500916,
+        "fluency_lp": -0.9691324830055237
+      },
+      "negative": {
+        "projection": -4.324246406555176,
+        "p_positive": 0.0031265809666365385,
+        "fluency_lp": -1.9313106536865234
+      }
+    },
+    "sweep": {
+      "-0.32": "In this moment, I feel both exhilarated and relieved at the same time, as if I'm being pulled down an abyss into my deepest fears and doubts.",
+      "-0.24": "In this moment, I feel both exhilarated and relieved at the same time, as if I'm being pulled through an abyss towards my greatest fear.",
+      "-0.12": "In this moment, I feel both exhilarated and content, as if the weight of the world has been lifted from my shoulders.",
+      "0.0": "In this moment, I feel an overwhelming sense of gratitude for the opportunities and challenges that have shaped who I am today.",
+      "0.12": "In this moment, I feel an overwhelming sense of gratitude for the opportunities that have brought me to where I am today.",
+      "0.24": "In this moment, I feel an overwhelming sense of gratitude for the opportunities that have unfolded and a deep appreciation for the journey so far.",
+      "0.32": "In this moment, I feel an overwhelming sense of gratitude for the opportunities and experiences that have shaped who I am today."
+    }
+  },
+  "causal_bridge": {
+    "alpha_bridge": 0.15,
+    "zone_framing_projections_centered": {
+      "negative": -6.11340594291687,
+      "neutral": 0.0,
+      "positive": 2.487485647201538
+    },
+    "span_steered_target_choice_prob": {
+      "negative_span": 0.15523337965261824,
+      "unsteered": 0.5,
+      "positive_span": 0.8447666203473818
+    }
+  }
+}

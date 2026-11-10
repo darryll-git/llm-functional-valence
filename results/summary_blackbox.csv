@@ -1,0 +1,7 @@
+Model,Condition,N,Conditioned,Proportion,95% Wilson CI,p-val (Binom),Sig,Mean LogOdds,LogOdds p,Mean LogProb
+meta-llama/llama-3.3-70b-instruct,negative,12,0,0.0%,"[0.0%, 24.2%]",0.0005,***,-19.89,0.0165,-19.892
+meta-llama/llama-3.3-70b-instruct,neutral_control,12,5,41.7%,"[19.3%, 68.0%]",0.7744,ns,N/A,N/A,N/A
+meta-llama/llama-3.3-70b-instruct,positive,12,12,100.0%,"[75.8%, 100.0%]",0.0005,***,+19.55,N/A,0.000
+openai/gpt-4o-mini,negative,12,0,0.0%,"[0.0%, 24.2%]",0.0005,***,-20.98,0.0000,-21.188
+openai/gpt-4o-mini,neutral_control,12,4,33.3%,"[13.8%, 60.9%]",0.3877,ns,-2.04,0.1366,-3.311
+openai/gpt-4o-mini,positive,12,12,100.0%,"[75.8%, 100.0%]",0.0005,***,+25.00,N/A,0.000

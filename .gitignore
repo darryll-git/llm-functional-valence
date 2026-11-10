@@ -1,0 +1,27 @@
+# Build & Packaging
+*.egg-info/
+build/
+dist/
+*.egg
+
+# Environments & Caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.cache/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

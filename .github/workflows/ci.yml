@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Set up Python ${{ matrix.python-version }} and CPU dependencies
+        run: |
+          uv venv --python ${{ matrix.python-version }} .venv
+          uv pip install --python .venv --torch-backend cpu -e ".[dev]"
+
+      - name: Run PyTest suite
+        run: |
+          .venv/bin/pytest tests/ -v
+
+      - name: Verify Full Dry-Run Pipeline & Empirical Artifact Plotting
+        run: |
+          .venv/bin/python run_all.py --dry-run --n_sessions 6

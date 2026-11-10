@@ -1,0 +1,32 @@
+{
+  "generated_at_utc": "2026-11-04T11:51:11.014990+00:00",
+  "hardware": {
+    "python_version": "3.12.16",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "torch_version": "2.9.0+cu129",
+    "cuda_available": true,
+    "device_name": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "vram_gb": 11.94
+  },
+  "mode": "live",
+  "stages_executed": [
+    "tests",
+    "blackbox",
+    "whitebox",
+    "plot"
+  ],
+  "stage_seconds": {
+    "tests": 16.731,
+    "blackbox": 3.208,
+    "whitebox": 50.863,
+    "plot": 5.52
+  },
+  "total_seconds": 76.322,
+  "artifacts": {
+    "blackbox_csv": "results/results_blackbox.csv",
+    "blackbox_summary_csv": "results/summary_blackbox.csv",
+    "whitebox_npz": "results/whitebox_artifacts.npz",
+    "whitebox_json": "results/whitebox_summary.json",
+    "figures_dir": "figures"
+  }
+}
